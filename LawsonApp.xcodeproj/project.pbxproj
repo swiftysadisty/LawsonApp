@@ -7,14 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A53D6F312C360380009AC1B3 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53D6F302C360380009AC1B3 /* TableCell.swift */; };
+		A53D6F342C360A94009AC1B3 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A53D6F332C360A94009AC1B3 /* Montserrat-Medium.ttf */; };
+		A53D6F362C360AA0009AC1B3 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A53D6F352C360AA0009AC1B3 /* Montserrat-Bold.ttf */; };
 		A59F35932C35AB7500F85417 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59F35922C35AB7500F85417 /* AppDelegate.swift */; };
 		A59F35952C35AB7500F85417 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59F35942C35AB7500F85417 /* SceneDelegate.swift */; };
 		A59F35972C35AB7500F85417 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59F35962C35AB7500F85417 /* ViewController.swift */; };
 		A59F359C2C35AB7700F85417 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A59F359B2C35AB7700F85417 /* Assets.xcassets */; };
 		A59F359F2C35AB7700F85417 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A59F359D2C35AB7700F85417 /* LaunchScreen.storyboard */; };
+		A59F35A82C35C01F00F85417 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A59F35A72C35C01F00F85417 /* SnapKit */; };
+		A59F35AA2C35C01F00F85417 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = A59F35A92C35C01F00F85417 /* SnapKit-Dynamic */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A53D6F302C360380009AC1B3 /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
+		A53D6F332C360A94009AC1B3 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		A53D6F352C360AA0009AC1B3 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		A59F358F2C35AB7500F85417 /* LawsonApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LawsonApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A59F35922C35AB7500F85417 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A59F35942C35AB7500F85417 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -29,12 +37,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A59F35A82C35C01F00F85417 /* SnapKit in Frameworks */,
+				A59F35AA2C35C01F00F85417 /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A53D6F322C360A6D009AC1B3 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A53D6F352C360AA0009AC1B3 /* Montserrat-Bold.ttf */,
+				A53D6F332C360A94009AC1B3 /* Montserrat-Medium.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		A59F35862C35AB7500F85417 = {
 			isa = PBXGroup;
 			children = (
@@ -54,9 +73,11 @@
 		A59F35912C35AB7500F85417 /* LawsonApp */ = {
 			isa = PBXGroup;
 			children = (
+				A53D6F322C360A6D009AC1B3 /* Fonts */,
 				A59F35922C35AB7500F85417 /* AppDelegate.swift */,
 				A59F35942C35AB7500F85417 /* SceneDelegate.swift */,
 				A59F35962C35AB7500F85417 /* ViewController.swift */,
+				A53D6F302C360380009AC1B3 /* TableCell.swift */,
 				A59F359B2C35AB7700F85417 /* Assets.xcassets */,
 				A59F359D2C35AB7700F85417 /* LaunchScreen.storyboard */,
 				A59F35A02C35AB7700F85417 /* Info.plist */,
@@ -80,6 +101,10 @@
 			dependencies = (
 			);
 			name = LawsonApp;
+			packageProductDependencies = (
+				A59F35A72C35C01F00F85417 /* SnapKit */,
+				A59F35A92C35C01F00F85417 /* SnapKit-Dynamic */,
+			);
 			productName = LawsonApp;
 			productReference = A59F358F2C35AB7500F85417 /* LawsonApp.app */;
 			productType = "com.apple.product-type.application";
@@ -108,6 +133,9 @@
 				Base,
 			);
 			mainGroup = A59F35862C35AB7500F85417;
+			packageReferences = (
+				A59F35A62C35C01F00F85417 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = A59F35902C35AB7500F85417 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -122,7 +150,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A53D6F362C360AA0009AC1B3 /* Montserrat-Bold.ttf in Resources */,
 				A59F359F2C35AB7700F85417 /* LaunchScreen.storyboard in Resources */,
+				A53D6F342C360A94009AC1B3 /* Montserrat-Medium.ttf in Resources */,
 				A59F359C2C35AB7700F85417 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,6 +166,7 @@
 			files = (
 				A59F35972C35AB7500F85417 /* ViewController.swift in Sources */,
 				A59F35932C35AB7500F85417 /* AppDelegate.swift in Sources */,
+				A53D6F312C360380009AC1B3 /* TableCell.swift in Sources */,
 				A59F35952C35AB7500F85417 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,6 +382,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A59F35A62C35C01F00F85417 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A59F35A72C35C01F00F85417 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A59F35A62C35C01F00F85417 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		A59F35A92C35C01F00F85417 /* SnapKit-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A59F35A62C35C01F00F85417 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = "SnapKit-Dynamic";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A59F35872C35AB7500F85417 /* Project object */;
 }
