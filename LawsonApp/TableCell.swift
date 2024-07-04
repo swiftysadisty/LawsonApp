@@ -7,15 +7,15 @@ class TableCell: UITableViewCell {
     
     private let mainLabel: UILabel = {
         let label = UILabel()
-        label.text = "Privet"
-        label.font = UIFont(name: "Montserrat-Bold", size: 16)
+        label.font = .montserratFont(ofSize: 16, weight: .bold)
+        label.numberOfLines = 0
         return label
     }()
     
     private let secondLabel: UILabel = {
         let label = UILabel()
-        label.text = "almaz"
-        label.font = UIFont(name: "Montserrat-Medium", size: 13)
+        label.font = .montserratFont(ofSize: 13, weight: .medium)
+        
         return label
     }()
     
@@ -31,19 +31,40 @@ class TableCell: UITableViewCell {
     }
     
     private func setupElements() {
-       addSubview(mainLabel)
-        addSubview(secondLabel)
+        let line = UIView()
+        line.backgroundColor = .systemGray4
+        
+        contentView.addSubview(mainLabel)
+        contentView.addSubview(secondLabel)
+        contentView.addSubview(line)
+        
         
         mainLabel.snp.makeConstraints { maker in
-            maker.top.equalToSuperview()
+            maker.top.equalToSuperview().offset(15)
             maker.leading.equalToSuperview()
+            maker.trailing.equalToSuperview().offset(-16)
         }
         
         secondLabel.snp.makeConstraints { maker in
             maker.top.equalTo(mainLabel.snp.bottom).offset(4)
             maker.leading.equalToSuperview()
+            maker.trailing.equalToSuperview().offset(-16)
+            maker.bottom.equalToSuperview().offset(-2)
+            
+        }
+        
+        line.snp.makeConstraints { maker in
+            maker.leading.equalToSuperview()
+            maker.trailing.equalToSuperview().offset(-16)
+            maker.bottom.equalToSuperview()
+            maker.height.equalTo(1)
         }
     }
     
+    
+    func config(title: String, deteal: String) {
+        mainLabel.text = title
+        secondLabel.text = deteal
+    }
 }
 
